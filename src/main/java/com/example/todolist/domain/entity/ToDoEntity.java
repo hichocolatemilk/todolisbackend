@@ -1,4 +1,4 @@
-package com.example.todolist.entity;
+package com.example.todolist.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

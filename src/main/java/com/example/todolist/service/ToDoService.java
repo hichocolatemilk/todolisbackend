@@ -1,7 +1,7 @@
 package com.example.todolist.service;
 
-import com.example.todolist.entity.ToDoEntity;
-import com.example.todolist.repository.ToDoRepository;
+import com.example.todolist.domain.entity.ToDoEntity;
+import com.example.todolist.domain.entity.ToDoRepository;
 import com.example.todolist.web.ToDoRequestUpdateDto;
 import com.example.todolist.web.ToDoResponseDto;
 import com.example.todolist.web.ToDoSaveRequestDto;

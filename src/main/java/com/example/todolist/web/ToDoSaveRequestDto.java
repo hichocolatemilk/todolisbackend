@@ -1,6 +1,6 @@
 package com.example.todolist.web;
 
-import com.example.todolist.entity.ToDoEntity;
+import com.example.todolist.domain.entity.ToDoEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

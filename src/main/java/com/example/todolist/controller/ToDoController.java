@@ -1,6 +1,6 @@
 package com.example.todolist.controller;
 
-import com.example.todolist.entity.ToDoEntity;
+import com.example.todolist.domain.entity.ToDoEntity;
 import com.example.todolist.service.ToDoService;
 import com.example.todolist.web.ToDoRequestUpdateDto;
 import com.example.todolist.web.ToDoResponseDto;
@@ -41,6 +41,4 @@ public class ToDoController {
         toDoService.delete(id);
         return id;
     }
-
-//    }
 }

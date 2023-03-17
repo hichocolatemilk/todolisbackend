@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Collection;
+
 @Getter
 @NoArgsConstructor
 @Entity
@@ -16,7 +18,7 @@ public class User {
     private Long id;
 
     @Column(nullable = false)
-    private String userId;
+    private String username;
 
     @Column(nullable = false)
     private String password;
@@ -25,11 +27,12 @@ public class User {
     private Role role;
 
     @Builder
-    public User(String userId, String password, Role role){
-
-        this.userId = userId;
+    public User(Long id ,String username, String password, Role role) {
+        this.id = id;
+        this.username = username;
         this.password = password;
         this.role = role;
     }
-
 }
+
+

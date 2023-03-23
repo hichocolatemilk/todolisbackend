@@ -6,6 +6,7 @@ import com.example.todolist.web.ToDoRequestUpdateDto;
 import com.example.todolist.web.ToDoResponseDto;
 import com.example.todolist.web.ToDoSaveRequestDto;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,10 +18,17 @@ public class ToDoController {
 
     private final ToDoService toDoService;
 
+
+    @GetMapping("/api/hello")
+    public ResponseEntity<String> sayHello() {
+        return ResponseEntity.ok("Hello from secured endpoint");
+    }
+
+
     @PostMapping("/api/add")
-    public String add(@RequestBody ToDoSaveRequestDto requestDto){
+    public ResponseEntity<String> add(@RequestBody ToDoSaveRequestDto requestDto){
         toDoService.save(requestDto);
-        return  "NEW ADD";
+        return ResponseEntity.ok("NEW ADD");
     }
     @GetMapping("/api/getall")
     public List<ToDoEntity> getAll(){

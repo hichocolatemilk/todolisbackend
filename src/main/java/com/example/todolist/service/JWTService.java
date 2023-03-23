@@ -1,4 +1,4 @@
-package com.example.todolist.config;
+package com.example.todolist.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

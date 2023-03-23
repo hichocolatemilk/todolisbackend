@@ -64,12 +64,12 @@ public class JWTService {
     }
 
     //클레임 추출, 토큰을 Claims 만드는 메소드
-    private Claims extractAllClaims(String accessToken){
+    private Claims extractAllClaims(String token){
         return Jwts
                 .parserBuilder()
                 .setSigningKey(key)
                 .build()
-                .parseClaimsJws(accessToken)
+                .parseClaimsJws(token)
                 .getBody();
     }
 
